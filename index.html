@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Éric Geovane | Desenvolvedor Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+     <link rel="icon" type="image/png" href="media/portfolio-icon.png">
+     <style>
+       body {
+          font-family: "Inter", sans-serif;
+          }
+          .transition-smooth {
+              transition: all 0.3s ease-in-out;
+          }
+          .fade-in {
+              opacity: 0;
+              transform: translateY(20px);
+              transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          }
+          .fade-in.visible {
+              opacity: 1;
+              transform: translateY(0);
+          }
+     </style>
+     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              } else {
+                entry.target.classList.remove("visible");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+      });
+     </script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- navbar -->
+    <header class="fixed top-0 w-full bg-gray-950/70 backdrop-blur shadow z-50 fade-in">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500">
+      &lt;/EricDev&gt;
+    </h1>
+
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      ☰
+    </button>
+
+    <nav>
+      <ul
+        id="menu"
+        class="hidden flex-col md:flex md:flex-row md:space-x-6 font-medium bg-transparent backdrop-blur absolute md:static top-16 left-0 w-full md:w-auto px-4 md:px-0 py-4 md:py-0 z-40
+        transform scale-y-0 md:scale-y-100 origin-top transition-all duration-300 ease-out"
+      >
+        <li class="py-2"><a href="#home" class="hover:text-purple-500">Início</a></li>
+        <li class="py-2"><a href="#sobre" class="hover:text-purple-500">Sobre</a></li>
+        <li class="py-2"><a href="#projetos" class="hover:text-purple-500">Projetos</a></li>
+        <li class="py-2"><a href="#contato" class="hover:text-purple-500">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <!-- apresentação -->
+    <section
+      id="home"
+      class="pt-36 pb-24 bg-gradient-to-br from-indigo-700 to-purple-900 text-center fade-in"
+    >
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+        <span id="typing" class="text-yellow-300"></span>
+        </h2>
+        <p class="text-lg sm:text-xl mb-8">
+          Pronto para criar experiências digitais modernas e funcionais.
+        </p>
+        <a
+          href="#projetos"
+          class="inline-block px-6 py-3 bg-yellow-300 text-gray-900 font-semibold rounded-full shadow-lg hover:bg-yellow-400 transition-smooth"
+          >Ver Projetos</a
+        >
+      </div>
+    </section>
+
+    <!-- sobre -->
+    <section id="sobre" class="py-20 bg-gray-800 fade-in">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-purple-500">Sobre mim</h2>
+        <p class="text-gray-300 text-lg">
+          Sou um desenvolvedor web apaixonado por transformar ideias em interfaces funcionais. Com
+          foco em HTML, CSS, JavaScript e Tailwind, venho construindo projetos responsivos,
+          otimizados e visualmente agradáveis.
+        </p>
+      </div>
+    </section>
+
+    <!-- projetos -->
+    <section id="projetos" class="py-20 bg-gray-900 fade-in">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2
+          class="text-3xl font-bold text-center mb-12 text-purple-500"
+        >
+          Projetos em Destaque
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- card 1 -->
+          
+          <div
+            class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition-smooth fade-in"
+          >
+            <h3 class="text-xl font-semibold mb-2">Portfólio Pessoal</h3>
+            <p class="text-gray-400 mb-4">
+              Este site que você está vendo agora! Criado com HTML e Tailwind CSS.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              class="text-yellow-300 hover:underline transition-smooth"
+              >Ver código</a
+            >
+          </div>
+
+          <!-- card 2 -->
+          <div
+            class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition-smooth fade-in"
+          >
+            <h3 class="text-xl font-semibold mb-2">Em breve...</h3>
+            <p class="text-gray-400 mb-4">
+              Em breve...
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              class="text-yellow-300 hover:underline transition-smooth"
+              >Em breve...</a
+            >
+          </div>
+
+          <!-- card 3 -->
+          <div
+            class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition-smooth fade-in"
+          >
+            <h3 class="text-xl font-semibold mb-2">Em breve...</h3>
+            <p class="text-gray-400 mb-4">
+             Em breve...
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              class="text-yellow-300 hover:underline transition-smooth"
+              >Em breve...</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- formulario -->
+    <section id="contato" class="py-20 bg-gray-800 fade-in">
+      <div class="max-w-xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-purple-500 mb-6">Entre em contato</h2>
+        <form id="contactForm" class="space-y-4" 
+        action="https://formsubmit.co/geovane.codes@gmail.com" 
+        method="POST" novalidate>
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Seu nome"
+        class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400"
+        required
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Seu email"
+        class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400"
+        required
+      />
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Sua mensagem"
+        class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400"
+        required
+      ></textarea>
+      
+      <input type="text" name="_honey" style="display:none" autocomplete="off" />
+      <input type="hidden" name="_captcha" value="false" />
+      <button
+        type="submit"
+        class="bg-yellow-300 text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-yellow-400 transition-smooth"
+      >
+        Enviar mensagem
+      </button>
+      <div id="formMessage" class="hidden mt-4 text-green-400 font-semibold text-lg opacity-0 transition-opacity duration-700"></div>
+</form>
+
+      </div>
+    </section>
+
+    <!-- rodapé -->
+    <footer class="bg-gray-950 text-center py-6 fade-in px-4">
+      <div class="flex flex-wrap justify-center gap-6 mb-2 max-w-5xl mx-auto">
+        <a
+          href="https://github.com/geovanecodes"
+          target="_blank"
+          class="text-gray-400 hover:text-white text-2xl transition-smooth"
+        >
+          <i class="ph ph-github-logo"></i>
+        </a>
+        <a
+          href="https://instagram.com/geovanecodes"
+          target="_blank"
+          class="text-gray-400 hover:text-white text-2xl transition-smooth"
+        >
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+        <a
+          href="https://linkedin.com/in/geovane-codes"
+          target="_blank"
+          class="text-gray-400 hover:text-white text-2xl transition-smooth"
+        >
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a
+          href="mailto:geovane.codes@gmail.com"
+          class="text-gray-400 hover:text-white text-2xl transition-smooth"
+        >
+          <i class="ph ph-envelope"></i>
+        </a>
+      </div>
+      <p class="text-gray-500 text-sm sm:text-base max-w-5xl mx-auto">
+        &copy; 2025 Éric Geovane. Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <!-- biblioteca AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- biblioteca Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- arquivo .js -->
+    <script src="script.js"></script>
+  </body>
+</html>
