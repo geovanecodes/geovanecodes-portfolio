@@ -21,7 +21,7 @@
 - `index.html` – Página principal do portfólio  
 - `style.css` – Estilos personalizados  
 - `script.js` – Funcionalidades em JavaScript  
-- `assets/` – Imagens e ícones usados no site  
+- `media/` – Imagens e ícones usados no site  
 
 ---
 
